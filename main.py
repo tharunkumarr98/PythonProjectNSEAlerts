@@ -7,6 +7,7 @@ with open("credentials.txt") as cred:
     new_API_Key = "d0b15badca204ad6a0d4711945ce3ac0"
     user_name = data[1]
     password = data[2]
+    to_ADD = data[3]
 print(type(password))
 parameters = {
     "apiKey": new_API_Key,
@@ -44,4 +45,4 @@ with smtplib.SMTP("smtp.gmail.com") as connection:
     connection.starttls()
     connection.login(user = user_name, password = password)
     connection.sendmail(from_addr = user_name,
-                        to_addrs= "tharunkumarr98@gmail.com", msg = f"Subject: Reliance Price alert \n\n {sending_message}")
+                        to_addrs= to_ADD , msg = f"Subject: Reliance Price alert \n\n {sending_message}")
