@@ -4,7 +4,7 @@ import smtplib
 import requests
 with open("credentials.txt") as cred:
     data = cred.readlines()
-    new_API_Key = "d0b15badca204ad6a0d4711945ce3ac0"
+    new_API_Key = "Your API KEY"
     user_name = data[1]
     password = data[2]
     to_ADD = data[3]
